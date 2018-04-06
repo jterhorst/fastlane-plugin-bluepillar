@@ -21,6 +21,7 @@ module Fastlane
         bluepill_runtime = params[:runtime]
         bluepill_device = params[:device]
         processed_device = bluepill_device.gsub(/ /, '\ ')
+        bluepill_config_path = params[:config_path]
 
 
         command = [
@@ -37,6 +38,8 @@ module Fastlane
           bluepill_num_sims,
           '-d',
           processed_device,
+          '-c',
+          bluepill_config_path
         ]
 
         command.concat ['-u', bluepill_runner_app_path] if bluepill_runner_app_path
@@ -49,7 +52,7 @@ module Fastlane
       end
 
       def self.authors
-        ["Shashikant86"]
+        ["Shashikant86", "jterhorst"]
       end
 
       def self.return_value
@@ -78,13 +81,13 @@ module Fastlane
                                      env_name: "BLUEPILLAR_XCTEST_SCHEME_PATH",
                                      description: "Path to the scheme to be build for the bluepill in the .xcodeproj",
                                      is_string: true,
-                                     optional: false),
+                                     optional: true),
 
            FastlaneCore::ConfigItem.new(key: :output_dir,
                                     env_name: "BLUEPILLAR_REPORT_PATH",
                                     description: "Path to store simulator logs and test reports",
                                     is_string: true,
-                                    optional: false),
+                                    optional: true),
 
            FastlaneCore::ConfigItem.new(key: :num_sims,
                                     env_name: "BLUEPILLAR_SUMULATORS",
@@ -104,6 +107,12 @@ module Fastlane
                                    env_name: "BLUEPILLAR_IOS_DEVICE",
                                    description: "The iOS device to be used for testing",
                                    default_value: "'iPhone 6'",
+                                   is_string: true,
+                                   optional: true),
+
+           FastlaneCore::ConfigItem.new(key: :device,
+                                   env_name: "BLUEPILLAR_CONFIG_PATH",
+                                   description: "Path for Bluepill config file",
                                    is_string: true,
                                    optional: true),
         ]
