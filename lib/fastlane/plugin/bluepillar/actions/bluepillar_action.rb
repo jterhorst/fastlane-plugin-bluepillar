@@ -110,7 +110,7 @@ module Fastlane
                                    is_string: true,
                                    optional: true),
 
-           FastlaneCore::ConfigItem.new(key: :device,
+           FastlaneCore::ConfigItem.new(key: :config_path,
                                    env_name: "BLUEPILLAR_CONFIG_PATH",
                                    description: "Path for Bluepill config file",
                                    is_string: true,
