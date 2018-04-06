@@ -6,11 +6,11 @@ require 'fastlane/plugin/bluepillar/version'
 Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-bluepillar'
   spec.version       = Fastlane::Bluepillar::VERSION
-  spec.author        = %q{Shashikant86}
-  spec.email         = %q{shashikant.jagtap@icloud.com}
+  spec.author        = %q{jterhorst}
+  spec.email         = %q{jterhorst@icloud.com}
 
   spec.summary       = %q{Fastlane Plugin to Run XCUITests in Parallel using Bluepill.}
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-bluepillar"
+  spec.homepage      = "https://github.com/jterhorst/fastlane-plugin-bluepillar"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
