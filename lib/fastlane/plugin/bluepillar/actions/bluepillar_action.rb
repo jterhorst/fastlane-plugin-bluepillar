@@ -85,21 +85,18 @@ module Fastlane
            FastlaneCore::ConfigItem.new(key: :num_sims,
                                     env_name: "BLUEPILLAR_SUMULATORS",
                                     description: "Number of sumulators to be launched",
-                                    default_value: "3",
                                     is_string: true,
                                     optional: true),
 
            FastlaneCore::ConfigItem.new(key: :runtime,
                                    env_name: "BLUEPILLAR_IOS_VERSION",
                                    description: "The iOS version to be used for testing",
-                                   default_value: '"iOS 10.3"',
                                    is_string: true,
                                    optional: true),
 
            FastlaneCore::ConfigItem.new(key: :device,
                                    env_name: "BLUEPILLAR_IOS_DEVICE",
                                    description: "The iOS device to be used for testing",
-                                   default_value: "'iPhone 6'",
                                    is_string: true,
                                    optional: true),
 
