@@ -20,7 +20,7 @@ module Fastlane
         bluepill_output_dir = params[:output_dir]
         bluepill_runtime = params[:runtime]
         bluepill_device = params[:device]
-        processed_device = bluepill_device.gsub(/ /, '\ ')
+        
         bluepill_config_path = params[:config_path]
 
 
@@ -33,7 +33,10 @@ module Fastlane
         command.concat ['-o', bluepill_output_dir] if bluepill_output_dir
         command.concat ['-r', bluepill_runtime] if bluepill_runtime
         command.concat ['-n', bluepill_num_sims] if bluepill_num_sims
-        command.concat ['-d', processed_device] if processed_device
+        if bluepill_device
+          processed_device = bluepill_device.gsub(/ /, '\ ')
+          command.concat ['-d', processed_device] if processed_device
+        end
         command.concat ['-c', bluepill_config_path] if bluepill_config_path
         command.concat ['-u', bluepill_runner_app_path] if bluepill_runner_app_path
 
