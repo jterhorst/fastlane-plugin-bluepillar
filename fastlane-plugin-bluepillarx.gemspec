@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'fastlane/plugin/bluepillar/version'
+require 'fastlane/plugin/bluepillarx/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'fastlane-plugin-bluepillar'
-  spec.version       = Fastlane::Bluepillar::VERSION
+  spec.name          = 'fastlane-plugin-bluepillarx'
+  spec.version       = Fastlane::Bluepillarx::VERSION
   spec.author        = %q{jterhorst}
   spec.email         = %q{jterhorst@icloud.com}
 
   spec.summary       = %q{Fastlane Plugin to Run XCUITests in Parallel using Bluepill.}
-  spec.homepage      = "https://github.com/jterhorst/fastlane-plugin-bluepillar"
+  spec.homepage      = "https://github.com/jterhorst/fastlane-plugin-bluepillarx"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)

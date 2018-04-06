@@ -1,5 +1,5 @@
 lane :test do
-  bluepillar(
+  bluepillarx(
       app:   'bluepill/Build/Products/Debug-iphonesimulator/Bluepillar.app',
       runner_app_path: 'bluepill/Build/Products/Debug-iphonesimulator/BluepillarUITests-Runner.app',
       scheme_path: 'Bluepillar.xcodeproj/xcshareddata/xcschemes/Bluepillar.xcscheme',

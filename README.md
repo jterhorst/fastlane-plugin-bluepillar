@@ -1,17 +1,19 @@
-# bluepillar plugin
+# bluepillarx plugin
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-bluepillar)
+Based on the old bluepillar
 
-<a href="https://travis-ci.org/Shashikant86/fastlane-plugin-bluepillar/"><img src="https://img.shields.io/travis/Shashikant86/fastlane-plugin-bluepillar.svg" /></a>
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-bluepillarx)
+
+<a href="https://travis-ci.org/jterhorst/fastlane-plugin-bluepillarx/"><img src="https://img.shields.io/travis/jterhorst/fastlane-plugin-bluepillarx.svg" /></a>
 
 ## Getting Started
 
-This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin to run XCUI Tests in parallel using Linkedin's Bluepill tool. To get started with `fastlane-plugin-bluepillar`, add it to your project by running:
+This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin to run XCUI Tests in parallel using Linkedin's Bluepill tool. To get started with `fastlane-plugin-bluepillarx`, add it to your project by running:
 
 
 
 ```bash
-fastlane add_plugin bluepillar
+fastlane add_plugin bluepillarx
 ```
 
 

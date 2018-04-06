@@ -1,10 +1,10 @@
 module Fastlane
   module Actions
-    class BluepillarAction < Action
+    class BluepillarxAction < Action
       BLUEPILL_PATH = '/usr/local/bin/bluepill'
       BP_PATH = '/usr/local/bin/bp'
       def self.run(params)
-        UI.message("Starting XCTests using the bluepillar fastlane plugin!")
+        UI.message("Starting XCTests using the bluepillarx fastlane plugin!")
         unless File.exist?(BLUEPILL_PATH)
           UI.user_error!("You must download bluepill binary from Github and put it in /usr/local/bin/bluepill to carry on execution")
         end
@@ -112,7 +112,7 @@ module Fastlane
       end
 
       def self.example_code
-           ['   bluepillar(
+           ['   bluepillarx(
                     app: "bluepill/Build/Products/Debug-iphonesimulator/Bluepillar.app",
                     runner_app_path: "bluepill/Build/Products/Debug-iphonesimulator/BluepillarUITests-Runner.app",
                     scheme_path: "Bluepillar.xcodeproj/xcshareddata/xcschemes/Bluepillar.xcscheme",
