@@ -25,23 +25,16 @@ module Fastlane
 
 
         command = [
-          'bluepill',
-          '-a',
-          bluepill_app_path,
-          '-s',
-          bluepill_scheme_path,
-          '-o',
-          bluepill_output_dir,
-          '-r',
-          bluepill_runtime,
-          '-n',
-          bluepill_num_sims,
-          '-d',
-          processed_device,
-          '-c',
-          bluepill_config_path
+          'bluepill' 
         ]
 
+        command.concat ['-a', bluepill_app_path] if bluepill_app_path
+        command.concat ['-s', bluepill_scheme_path] if bluepill_scheme_path
+        command.concat ['-o', bluepill_output_dir] if bluepill_output_dir
+        command.concat ['-r', bluepill_runtime] if bluepill_runtime
+        command.concat ['-n', bluepill_num_sims] if bluepill_num_sims
+        command.concat ['-d', processed_device] if processed_device
+        command.concat ['-c', bluepill_config_path] if bluepill_config_path
         command.concat ['-u', bluepill_runner_app_path] if bluepill_runner_app_path
 
         Actions.sh(command.join(' '))
