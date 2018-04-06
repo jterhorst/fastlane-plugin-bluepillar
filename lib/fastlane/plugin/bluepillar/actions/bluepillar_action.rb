@@ -69,7 +69,7 @@ module Fastlane
                                        env_name: "BLUEPILLAR_APP_PATH",
                                        description: "Path to the main app to be build for the bluepill in the Derived Data",
                                        is_string: true,
-                                       optional: false),
+                                       optional: true),
 
            FastlaneCore::ConfigItem.new(key: :runner_app_path,
                                       env_name: "BLUEPILLAR_RUNNER_APP_PATH",
